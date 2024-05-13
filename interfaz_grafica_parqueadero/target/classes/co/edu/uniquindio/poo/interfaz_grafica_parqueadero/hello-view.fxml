@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.interfaz_grafica_parqueadero.HelloController" spacing="10" padding="10">
+    <TextField fx:id="txtPlaca" promptText="Placa"/>
+    <TextField fx:id="txtModelo" promptText="Modelo"/>
+    <TextField fx:id="txtPropietario" promptText="Propietario"/>
+    <ComboBox fx:id="comboTipo" promptText="Tipo de Vehículo">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Carro"/>
+                <String fx:value="Moto"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <TextField fx:id="txtTipoMoto" promptText="Tipo de Moto" visible="false"/>
+    <TextField fx:id="txtVelocidadMaxima" promptText="Velocidad Máxima" visible="false"/>
+    <Button text="Registrar Entrada" onAction="#handleRegistrarEntrada"/>
+    <ListView fx:id="listVehiculos" />
+    <Button text="Registrar Salida" onAction="#handleRegistrarSalida"/>
+</VBox>
+
+
